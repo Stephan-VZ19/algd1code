@@ -9,13 +9,13 @@ public class BinarySearch1 {
 
         System.out.println("Log before");
         
-        byte[] a = new byte[] {10};
+        byte[] a = new byte[10];
 
         for (int i=0; i<a.length; i++) {
             a[i] = (byte) (i);
         }
         
-        byte value = 7;
+        byte value = 3;
         int result = binarySearch(a, value);
 
         System.out.println(result);
@@ -24,19 +24,19 @@ public class BinarySearch1 {
 
     }
     
-    public static int binarySearch(byte[] a, byte value) {
+    public static int binarySearch(byte[] a, byte value) {  // byte um einen overflow zu verhindern
 
-        int first = 0;
-        int last = a.length-1;
+        int first = -1;
+        int last = a.length;
 
-        while (first <= last) {
+        while (first + 1 != last) {
             int m = (first + last) >>> 1; 
             if (a[m] < value) {
-                first = m + 1;
-            } else if (a[m] == value) {
-                return m;
+                first = m;
+            } else if (a[m] > value) {
+                last = m;
             } else {
-            last = m - 1;
+                return m;
             }
         }
         return -1;
