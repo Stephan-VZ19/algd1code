@@ -1,4 +1,4 @@
-package _05_Sortieren; 
+package sortieren_05; 
 
 import java.util.Arrays;
 
@@ -51,31 +51,51 @@ public class SortPackage {
     }
     
     /**
-     * Gibt true zurück, falls das Array aufsteigend sortiert ist.
-     * Aufwand: linear in der Länge des Arrays
+     * Gibt true zurï¿½ck, falls das Array aufsteigend sortiert ist.
+     * Aufwand: linear in der Lï¿½nge des Arrays
      * @return true, falls das Array aufsteigend geordnet ist, ansonsten false.
      */
     public boolean isSorted() {
-    	// TODO
-    	return false;
+        int i=1;
+        while (i<m_array.length && m_array[i-1] <= m_array[i]) i++;
+        return i == m_array.length;
     }
     
     /**
      * Ordnet alle Werte des Arrays in aufsteigender Reihenfolge.
-     * Aufwand: quadratisch in der Länge des Arrays: O(n^2)
-     * Methode: Sortieren durch direktes Auswählen.
+     * Aufwand: quadratisch in der Lï¿½nge des Arrays: O(n^2)
+     * Methode: Sortieren durch direktes Auswï¿½hlen.
      */
     public void selectionSort() {
-    	// TODO
+    	for (int last=m_array.length-1; last>0; last--) {
+            int maxPos = 0;
+            double max = m_array[maxPos];
+            for (int i=1; i<=last; i++) {
+                if (m_array[i]>max) {
+                    maxPos = i;
+                    max = m_array[maxPos];
+                }
+            }
+            m_array[maxPos] = m_array[last];
+            m_array[last] = max;
+        }
     }
 
     /**
      * Ordnet alle Werte des Arrays in aufsteigender Reihenfolge.
-     * Aufwand: quadratisch in der Länge des Arrays: O(n^2)
-     * Methode: Sortieren durch direktes Einfügen.
+     * Aufwand: quadratisch in der Lï¿½nge des Arrays: O(n^2)
+     * Methode: Sortieren durch direktes Einfï¿½gen.
      */
     public void insertionSort() {
-    	// TODO
+    	for (int i=1; i<m_array.length; i++) {
+            double x = m_array[i];
+            int j = i-1;
+            while( j>=0 && m_array[j] > x) {
+                m_array[j+1] = m_array[j];
+                j--;
+            }
+            m_array[j+1] = x;
+        }
     }
     
     /**

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package _05_Sortieren;
+package sortieren_05;
 
 import static org.junit.jupiter.api.Assertions.*;
 

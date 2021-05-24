@@ -1,4 +1,4 @@
-package _05_Sortieren; 
+package sortieren_05; 
 
 public class SortingTests {
     static enum Order { Random, Increasing, Decreasing };
@@ -10,7 +10,7 @@ public class SortingTests {
         
         switch(order) {
         case Random:
-            System.out.println("\nzufällige Folge von " + size + " ganzen Zahlen");
+            System.out.println("\nzufï¿½llige Folge von " + size + " ganzen Zahlen");
             sp.randomOrder();
             break;
         case Increasing:
@@ -27,12 +27,12 @@ public class SortingTests {
         // SelectionSort
         sp.setData(data.clone());
         time = sp.sort(SortPackage.Method.SelectionSort);
-        System.out.println("Sortieren durch Auswählen dauert: " + time + " ms, sortiert: " + sp.isSorted());
+        System.out.println("Sortieren durch Auswï¿½hlen dauert: " + time + " ms, sortiert: " + sp.isSorted());
 
         // InsertionSort
         sp.setData(data.clone());
         time = sp.sort(SortPackage.Method.InsertionSort);
-        System.out.println("Sortieren durch Einfügen dauert: " + time + " ms, sortiert: " + sp.isSorted());
+        System.out.println("Sortieren durch Einfï¿½gen dauert: " + time + " ms, sortiert: " + sp.isSorted());
 
         // JDK Sort
         sp.setData(data.clone());
