@@ -17,8 +17,10 @@ public class Programm2 {
         int value = 53;
 
         int i=0;
+        int buffer = 0;
         boolean found = false;
         if (value != array[array.length-1]) {
+            buffer = array[array.length-1];
             array[array.length-1] = value;
         } else {
             found = true;
@@ -28,6 +30,7 @@ public class Programm2 {
             while ( array[i] != value) i++;
             found = (i < array.length-1);
         }
+        array[array.length-1] = buffer;
 
         System.out.println("Value found: " + found);
         System.out.println("At index: " + i);
