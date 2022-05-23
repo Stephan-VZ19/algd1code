@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ch.fhnw.algd1.mergesort.MergesortSimpleTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-05-23T12:44:16" hostname="LAPTOP-LSE1D2I7" time="0.005">
+  <properties/>
+  <testcase name="testArrayWithOneElement" classname="ch.fhnw.algd1.mergesort.MergesortSimpleTest" time="0.004"/>
+  <testcase name="testEmptyArray" classname="ch.fhnw.algd1.mergesort.MergesortSimpleTest" time="0.0"/>
+  <testcase name="testRandomOrder" classname="ch.fhnw.algd1.mergesort.MergesortSimpleTest" time="0.0"/>
+  <testcase name="testDescendingOrder" classname="ch.fhnw.algd1.mergesort.MergesortSimpleTest" time="0.0"/>
+  <testcase name="testAlreadySorted" classname="ch.fhnw.algd1.mergesort.MergesortSimpleTest" time="0.001"/>
+  <testcase name="testSameNumbers" classname="ch.fhnw.algd1.mergesort.MergesortSimpleTest" time="0.0"/>
+  <testcase name="testTwoSections" classname="ch.fhnw.algd1.mergesort.MergesortSimpleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

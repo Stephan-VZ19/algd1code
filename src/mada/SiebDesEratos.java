@@ -6,10 +6,10 @@ public class SiebDesEratos {
 
         int[] arr = primFinder(120);
 
-        for (int prim : arr) {
+        for (int i=0; i<arr.length; i++) {
 
-            if (arr[prim] != 0) {
-                System.out.print(arr[prim] + " ");
+            if (arr[i] != 0) {
+                System.out.print(arr[i] + " ");
             }
 
         }
